@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+```````````````````````````LOGIN USER DATA INPUT``````````````````````````````
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Login</title>
+        <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <div class="content">
+         <h:body style="background: url(twitter-background.jpg);background-size:cover; padding-left: 30%" >
+       
+        <h:form style="font-family: Arial,sans-serif;padding-left: 0.0000001%;
+                color: #fff;    font-size: 20px">
+            <h2 style="font-family: inherit ; font-weight:bold; font-size: 35px; color: #000000; padding-top: 20px; padding-left: 10%">Log in to Peeper</h2>
+         <br/> 
+           
+            <table style="font-family: inherit ; font-weight:bold; font-size: 20px; color: #000000; padding-left: 5% ">
+                <tr>
+                    <td>User ID:</td>
+                    <td> 
+                        <h:inputText id="id" value="#{twitterHomeBean.userId}" required="true" requiredMessage="User ID can not be empty"></h:inputText>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>Password:</td>
+                    <td> 
+                        <h:inputSecret id="pwd" value="#{twitterHomeBean.password}" required="true" requiredMessage="Password can not be empty">
+                        </h:inputSecret>
+                    </td>
+                </tr>
+            </table>
+         <br/>
+            <p style="padding-left: 200px">
+                <h:commandButton id="submit" value="Log in"
+                                 action="#{twitterHomeBean.login()}"></h:commandButton>
+                
+            </p>
+    
+         <p style="padding-left: 150px ;color: #000000">
+             <h:link style="color: #000000" outcome="forgotPassword">
+                    Forgot Password
+             </h:link>
+         </p>
+        </h:form>
+         
+        
+    </h:body>
+        </div> 
+</html>

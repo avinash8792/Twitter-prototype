@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Peeper Sign-Up</title>
+         <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+
+    </h:head>
+    <div class="content">
+        
+    <h:body style="background: url(twitter-background.jpg);background-size:cover; padding-left: 30%" >
+       <br/>
+       
+        <h:form style="font-family: Arial,sans-serif;padding-left: 5%;
+                color: #fff;    font-size: 20px">
+            <h2 style="font-family: inherit ; font-weight:bold; font-size: 40px; color: #000000; padding-top: 15px;">Create a new Peeper Account!</h2>
+               <br/>  
+            <table style="font-family: inherit ; font-weight:bold; font-size: 20px; color: #000000; ">
+                <tr>
+                    <td>Full Name:</td>
+                    <td> 
+                        <h:inputText id="fullName" required ="true" 
+                             requiredMessage="The Name field cannot be empty"
+                        title="Please enter your Full Name"
+                        value="#{twitterHomeBean.fullName}"
+                        validatorMessage="Please use a correct format 
+                        between 5-30 characters">
+                        <f:validateLength maximum="30" minimum="5" />
+                    </h:inputText>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Phone Number:</td>
+                    <td>
+                         <h:inputText id="phoneNum" required ="true" 
+                             requiredMessage="The phone number cannot be empty"
+                        title="Please enter your phone number"
+                        value="#{twitterHomeBean.phoneNum}"
+                        validatorMessage="Please use a correct format 
+                        for your Phone Number ">
+                        <f:validateLength maximum="10" minimum="10" />
+                        </h:inputText>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Email Id:</td>
+                    <td>
+                         <h:inputText id="eMail" required ="true" 
+                             requiredMessage="The email number cannot be empty"
+                        title="Please enter your Email Id"
+                        value="#{twitterHomeBean.eMail}"
+                        validatorMessage="Please use a correct format 
+                        for your mail id">
+                        <f:validateLength maximum="30" minimum="3" />
+                        </h:inputText>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>User Id:</td>
+                    <td>
+                         <h:inputText id="userId" required ="true" 
+                             requiredMessage="The userId cannot be empty"
+                        title="Please enter your userId"
+                        value="#{twitterHomeBean.userId}"
+                        validatorMessage="Please use a correct format 
+                        for your userId">
+                        <f:validateLength maximum="20" minimum="3" />
+                        </h:inputText>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                         <h:inputSecret  id="password" required ="true"
+                             requiredMessage="The password cannot be empty"
+                        title="Please enter your password"
+                        value="#{twitterHomeBean.password}"
+                        validatorMessage="Please use a correct format 
+                        for your Password" >
+                        <f:validateLength maximum="10" minimum="3" />
+                        </h:inputSecret >
+                    </td>
+                </tr>
+                                
+                
+                <tr>
+                      
+                    <td>Security Question 1:</td>
+                    <td>
+                        <h:selectOneMenu id="question1" style="width:255px"
+                             value="#{twitterHomeBean.securityQues1}" title="Please select your security question 1">
+                        <f:selectItems value="#{forgotPassword.questions1}"></f:selectItems>                     
+                        </h:selectOneMenu> 
+                    
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Security Password 1:</td>
+                    <td>
+                         <h:inputText id="securityAns1" required ="true" 
+                             requiredMessage="The password cannot be empty"
+                        title="Please enter your password"
+                        value="#{twitterHomeBean.securityAns1}"
+                        validatorMessage="Please use a correct format 
+                        for your security password 1">
+                        <f:validateLength maximum="10" minimum="3" />
+                        </h:inputText>
+                    </td>
+                </tr>
+                 
+                 <tr>
+                    <td>Security Question 2:</td>
+                    <td>
+                        <h:selectOneMenu id="question2" style="width:255px"
+                             value="#{twitterHomeBean.securityQues2}" title="Please select your security question 1">
+                        <f:selectItems value="#{forgotPassword.questions2}"></f:selectItems>                     
+                        </h:selectOneMenu> 
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Security Password 2:</td>
+                    <td>
+                         <h:inputText id="securityAns2" required ="true" 
+                             requiredMessage="The password cannot be empty"
+                        title="Please enter your password"
+                        value="#{twitterHomeBean.securityAns2}"
+                        validatorMessage="Please use a correct format 
+                        for your security password 2">
+                        <f:validateLength maximum="10" minimum="3" />
+                        </h:inputText>
+                    </td>
+                </tr>
+                 
+                 <tr>
+                    <td>Location :</td>
+                    <td>
+                         <h:inputText id="location"                              
+                                      value="#{twitterHomeBean.location}">
+                        </h:inputText>
+                    </td>
+                </tr>
+            </table>
+               <br/>
+               <p style="padding-left: 250px" >
+                <h:commandButton id="submit" value="Submit"
+                                 action="confirmation1.xhtml" />
+            </p>
+
+        </h:form>
+        
+    </h:body>
+        </div>
+</html>

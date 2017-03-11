@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Block Results</title>
+    <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <div class="content">
+    <h:body style="background: url(twitter-background.jpg);background-size:cover">
+        <h:form style="font-family: Arial,sans-serif;padding-left: 5%;
+                color: #fff;    font-size: 20px">
+             <h:commandButton id="home" value="Home" action="tweet.xhtml"></h:commandButton>
+            <h:commandButton id="search" value="Search" action="search.xhtml"></h:commandButton>
+            <h:commandButton id="followers" value="Followers" action="#{search.followers()}"></h:commandButton>
+            <h:commandButton id="following" value="Following" action="#{search.following()}"></h:commandButton>
+            <h:commandButton id="block" value="Block Followers" action="#{search.blckfollowers()}"></h:commandButton>
+            <h:commandButton id="profile" value="Profile Details" action="#{search.profiledetails()}"></h:commandButton>
+            <h:commandButton id="trend" value="Trending" action="#{search.hashtag()}"></h:commandButton>
+            <h:commandButton id="logout" value="Log Out" action="#{search.logout()}"></h:commandButton>
+            <br></br>
+            <h:dataTable value="#{search.followersResult}" var ="f" class="table table-bordered" border="1" cellpadding="5px" 
+                         style="border-collapse: collapse">
+                
+                
+                <h:column>
+                    <f:facet name="header"> User ID </f:facet>
+                    #{f.followloginID}
+                </h:column>
+              
+                <h:column>
+                    <f:facet name="header"> Un-Block </f:facet>
+                    <h:commandButton value="Un-Block" action="#{search.unblock(f)}" />
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+    </div>
+</html>
+

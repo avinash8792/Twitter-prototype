@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Peeper Home </title>
+        
+    <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <div class="content">
+    <h:body style="background: url(twitter-background.jpg);background-size:cover">
+     
+        <h:form style="font-family: Arial,sans-serif;
+                color: #fff;    font-size: 20px">
+          <h:outputLabel value="Hello, #{twitterHomeBean.userId}! Welcome to Peeper!!"></h:outputLabel><br></br>
+            <h:panelGroup layout="block"> 
+            <h:commandButton id="home" value="Home" action="tweet.xhtml"></h:commandButton>
+            <h:commandButton id="search" value="Search" action="search.xhtml"></h:commandButton>
+            <h:commandButton id="followers" value="Followers" action="#{search.followers()}"></h:commandButton>
+            <h:commandButton id="following" value="Following" action="#{search.following()}"></h:commandButton>
+            <h:commandButton id="block" value="Block Followers" action="#{search.blckfollowers()}"></h:commandButton>
+            <h:commandButton id="profile" value="Profile Details" action="#{search.profiledetails()}"></h:commandButton>
+            <h:commandButton id="trend" value="Trending" action="#{search.hashtag()}"></h:commandButton>
+            <h:commandButton id="logout" value="Log Out" action="#{search.logout()}"></h:commandButton>
+            
+            </h:panelGroup>
+            
+            <h:panelGroup layout="block" style="align-content: center">   
+
+            
+            <p>Please Enter your Peep<br></br>
+               
+                  <h:inputTextarea id="textarea" cols="30" rows="2" title="peep area" value="#{tweetfunction.tweet}" >
+                  
+                       <f:validateLength maximum="140" />
+                  </h:inputTextarea>
+                  
+                  
+                  <h:commandButton id="button" value="Peep" action="#{tweetfunction.dotweet()}"> </h:commandButton>
+                  
+                  <p><h2>News Feed</h2></p>
+                 
+      
+        
+                  <h:dataTable value="#{tweetfunction.alltweets}" var="order" class="table table-bordered" border="1" cellpadding="5px" 
+                         style="border-collapse: collapse">
+            <h:column>
+                
+                <f:facet name="header">User Id</f:facet>
+                <h:outputText value="#{order.userid}"></h:outputText>
+            </h:column>
+            <h:column>
+               
+                  <f:facet name="header">Peep</f:facet>
+                  <h:outputText value="#{order.tweets}"></h:outputText>
+            </h:column>
+            
+              <h:column>
+               
+                  <f:facet name="header">Time</f:facet>
+                  <h:outputText value="#{order.date}"></h:outputText>
+            </h:column>
+                      
+              <h:column>
+               
+                  <f:facet name="header">Re-Peep</f:facet>
+                  <h:commandButton id="retweet" value="Re-Peep" action="#{tweetfunction.retweet(order)}"></h:commandButton>
+            </h:column>
+               <h:column>
+               
+                  <f:facet name="header">Like</f:facet>
+                  
+                  <h:commandButton id="LIKE" value="Like" action="#{tweetfunction.like(order)}"></h:commandButton>
+            </h:column>
+                      
+                      
+                          <h:column>
+               
+                 <f:facet name="header">Reply</f:facet>
+                     
+                 <h:commandButton id="replay" value="Reply" action="#{tweetfunction.reply(order)}"></h:commandButton>
+            </h:column>
+                      
+    		</h:dataTable>
+            </p>
+            
+            
+                </h:panelGroup>
+        </h:form>
+    </h:body>
+    </div>
+</html>
+

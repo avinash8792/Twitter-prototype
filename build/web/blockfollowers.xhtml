@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Block People</title>
+    <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <div class="content">
+    <h:body style="background: url(twitter-background.jpg);background-size:cover">
+      
+      <h:form style="font-family: Arial,sans-serif;padding-left: 5%;
+                color: #fff;    font-size: 20px">
+          <p>
+              Search People:
+</p>
+          <h:commandButton id="search" value="Submit" action="#{search.blckfollowers()}"></h:commandButton>
+      </h:form>
+    </h:body>
+    </div>
+</html>
+

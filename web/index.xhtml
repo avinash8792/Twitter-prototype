@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Peeper</title>
+        <link href="resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/Login.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="pragma" content="no-cache" />
+        
+    </h:head>
+    
+    <div class="content">
+    <h:body>
+        <div class="container" style="max-height: 450px; background: url(resources/img/twitter-background.jpg) no-repeat center fixed; display: flex; flex-direction: column; align-items: center; padding-bottom: 20px;">
+        <div class="row" style=" opacity: 0.8; text-align: center; border-radius: 5px; margin-top: 20px;">
+                        <h1 style="font-family: inherit ; padding-left: 10% ;font-weight:bold; font-size: 40px; color: #000000; padding-top: 25px;">Welcome to "Peeper"</h1>
+                        
+        </div>  
+            </div>
+        <h:form style="padding-left: 10%">
+            
+            <h:graphicImage value="resources/img/welcome.gif" width="700" height="200" style="padding-left: 10%" />
+            <br/>
+
+
+<br/>
+            <p style="padding-left: 40%">
+               <h:commandButton id="login" value="Log In" style=" border-radius: 5px;
+                                border: 1px solid rgba(255,255,255,0.3);
+                                font-size: 16px;
+                                font-weight: 200;
+                                padding-left: 10px 35px"
+                                action="login" />
+            
+               &nbsp;   
+           
+                <h:commandButton id="signUp" value="Sign Up" style=" border-radius: 5px;
+                                border: 1px solid rgba(255,255,255,0.3);
+                                font-size: 16px;
+                                font-weight: 200;
+                                padding-left: 10px 35px"
+                                 action="signUp" />
+            </p>         
+        </h:form>
+        
+    </h:body>  
+        </div>
+</html>
+
+
+
+

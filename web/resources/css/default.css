@@ -1,0 +1,249 @@
+/*#############################################################
+Name: Summer Breeze
+Date: 2006-07-04
+Description: A lightweight colorful design, feels like summer!
+Author: Viktor Persson
+URL: http://arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* standard elements */
+* {
+	font: normal 1.030em "Lucida Sans Unicode",sans-serif;
+	margin: 0; padding: 0;
+}
+a {
+	color: #362;
+}
+a:hover, .footer a:hover {
+	color: #111;
+}
+body {	
+	background: #769359 url(../img/twitter-background.jpg);
+        background-size:cover;
+        width:80%;
+        color: #443;
+	font-size: 12px;
+	margin: 0;
+        
+}
+p,cite,code,ul {
+	margin-bottom: 1.2em;
+}
+h1 {
+	font: normal 1.2em "Lucida Sans Unicode",sans-serif;
+}
+h2 {
+	font-family: inherit ; font-weight:bold; font-size: 35px; color: #000000; padding-top: 20px; padding-left: 10%
+}
+ul {
+	margin: 12px 0;
+}
+form{
+    font-family: Arial,sans-serif;padding-left: 20%;
+                color: #fff;    font-size: 20px
+}
+li {
+	list-style: url(../img/li.gif);
+	margin-left: 18px;
+}
+code {
+	background: url(../img/bgcode.gif);
+	border: 1px dotted #AAA;
+	color: #444;
+	display: block;
+	font: normal 1em "Lucida Sans Unicode",serif;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+cite {
+	display: block;
+	background: url(../img/quote.gif) no-repeat;
+	color: #663;
+	font: normal 1.1em "Lucida Sans Unicode",serif;
+	padding-left: 28px;
+}
+
+/* misc */
+.divider {
+	background: url(../img/divider.gif) no-repeat;
+	height: 24px;
+	margin: 16px 0;
+}
+.clearer {
+	clear: both;
+}
+
+/* structure */
+.container {
+	font-size: 1em;
+	margin: 0 auto;
+	width: 800px;
+}
+
+/* header */
+.header {
+	background: #597F93 url(../img/header.jpg) no-repeat center top;
+	background-size: 100% 100%;
+        
+	text-align: center;
+}
+.header h1 {
+	color: #FFF;
+	font: normal 3em "Trebuchet MS",sans-serif;
+	line-height: 180px;
+}
+
+/* navigation */
+.navigation {
+	height: 36px;
+	text-align: center;
+	width: auto;
+       
+        
+        
+}
+.searchbox{
+    background: url(../img/navigation.jpg) no-repeat;
+	color: #FFF;
+	font: bold 1.2em serif;
+	height: 20px; 
+	letter-spacing: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+       
+        width: 100px;
+}
+
+.DropDownBox{
+    background: url(../img/navigation.jpg) no-repeat;
+	color: #FFF;
+	font: bold 1.2em serif;
+	height: 20px; 
+	letter-spacing: 1px;
+        margin-left: 10px;
+       
+        border-radius: 12px;
+       
+        width: 150px;
+}
+.navigationa {
+	background: url(../img/navigation.jpg) no-repeat;
+	color: #FFF;
+        margin-left: 10px;
+	font: bold 1.2em serif;
+	height: auto; 
+	letter-spacing: 1px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 0px #00823F;
+ }
+ 
+ .navigationSelect {
+	background: #5ba57e;
+        color: #FFF;
+        
+	font: bold 1.2em serif;
+	height: auto; 
+	letter-spacing: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        box-shadow: 0px 5px 0px #00823F;
+        border-color: #cc0033;
+ }
+/* content */
+.content {
+	padding: 18px 0;
+        font-family: Arial,sans-serif;padding-left: 5%;
+                color: #fff;    font-size: 20px
+}
+.content h1 {
+	color: #553;
+	font-size: 1.4em;
+	margin-bottom: 4px;
+}
+
+/* footer */
+.footer {
+    color: #00cccc;
+	font-size: 0.9em;
+	padding-bottom: 12px;
+	text-align: center;
+}
+
+
+.table{   
+	border-collapse:separate;
+        border: #0000cc;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+       
+        text-align: center;
+        
+        
+}
+.tablebuyer{   
+	border-collapse:separate;
+        border: #0000cc;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+       
+        text-align: center;
+        
+        
+}
+
+
+.table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #5ba57e;
+	padding:16px;
+        border-right: #F9F9F9;
+        border-left: #F9F9F9;
+        border-bottom-style: solid;
+        
+       
+      
+}
+
+.table-header1{
+	text-align:center;
+	background:none repeat scroll 0 0 #5ba57e;
+	padding:16px;
+        border-right: #F9F9F9;
+        border-left: #F9F9F9;
+        border-bottom-style: solid;
+        width: 100px;
+       
+      
+}
+
+.table-odd-row{
+	text-align:center;
+        background:none repeat scroll 0 0 #cccccc;
+	border-top:1px solid #BBBBBB;
+}
+.table-odd-row1{
+	text-align:center;
+        background:none repeat scroll 0 0 #cccccc;
+	border-top:1px solid #BBBBBB;
+        width: 100px;
+}
+
+.table-even-row{
+	text-align:center;
+        background:none repeat scroll 0 0 #ffffff;
+	border-top:1px solid #BBBBBB;
+}
+.table-even-row1{
+	text-align:center;
+        background:none repeat scroll 0 0 #ffffff;
+	border-top:1px solid #BBBBBB;
+        width: 100px;
+}
